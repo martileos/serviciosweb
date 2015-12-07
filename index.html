@@ -6,12 +6,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/eventos.js"></script>	
 </head>
 <body>
 	<header>
 		<h1>Sistema de PW10</h1>
 		<ul>
-			<li><button type="button" class="btn btn-primary">Altas</button></li>
+			<li><button type="button" id="btnAltas" class="btn btn-primary">Altas</button></li>
 			<li><button type="button" class="btn btn-success">Bajas</button></li>
 			<li><button type="button" class="btn btn-info">Cambios</button></li>
 			<li><button type="button" class="btn btn-warning">Consultas</button></li>
@@ -20,7 +21,7 @@
 	</header>
 	<section id="secAltaAlumnos">
 		<h2>Altas de Alumnos</h2>
-		<form action="">
+		<form action="javascript:GuardaAltaAlumno();" id="frmAltaAlumnos">
 			<input type="text" id="txtNumControl" placeholder="Núm Control" class="form-control" required autofocus>
 			<input type="text" id="txtNombres"      placeholder="Nombres" class="form-control" required>
 			<input type="text" id="txtApellidoPat"  placeholder="Apellido Paterno" class="form-control" required>
@@ -31,6 +32,7 @@
 			<input type="text" id="txtEstatus"      placeholder="Estatus" class="form-control" required>
 			<input type="submit" value="Guardar">
 		</form>
+
 	</section>
 </body>
 </html>
