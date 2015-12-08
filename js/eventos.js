@@ -8,7 +8,7 @@ var inicioApp = function()
 
 	var GuardaAltaAlumno = function()
 	{
-		var ncontrol  = $("#txtNControl").val();
+		var ncontrol  = $("#txtNumControl").val();
 		var nombres   = $("#txtNombres").val();
 		var apellidop = $("#txtApellidoPat").val();
 		var apellidom = $("#txtApellidoMat").val();
@@ -25,8 +25,24 @@ var inicioApp = function()
 						 "&semestre="+semestre+
 						 "&promedio="+promedio+
 						 "&estatus="+estatus;
+		//Conexión con el PHP.
 		$.ajax({
-			
+			cache: false, 
+			type: "POST",
+			dataType: "json",
+			url: "php/funciones.php",
+			data: parametros,
+			success: function(response){
+				if(response.respuesta == true)
+				{
+					alert("Registro guardado");
+				}
+				else
+					alert("No se pudo guardar");
+			},
+			error: function(xhr,ajaxOptions,thrownError){
+
+			}
 		});
 
 	}
