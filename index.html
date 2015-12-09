@@ -14,7 +14,7 @@
 		<ul>
 			<li><button type="button" id="btnAltas" class="btn btn-primary">Altas</button></li>
 			<li><button type="button" class="btn btn-success">Bajas</button></li>
-			<li><button type="button" class="btn btn-info">Cambios</button></li>
+			<li><button type="button" id="btnCambios" class="btn btn-info">Cambios</button></li>
 			<li><button type="button" class="btn btn-warning">Consultas</button></li>
 			<li><button type="button" class="btn btn-danger">Salir</button></li>
 		</ul>
@@ -32,10 +32,45 @@
 			<input type="text" id="txtEstatus"      placeholder="Estatus" class="form-control" required>
 			<input type="submit" value="Guardar">
 		</form>
-
+	</section>
+	<section id="secCambioAlumnos">
+		<h2>Cambios de Alumnos</h2>
+		<form action="javascript:GuardaCambioAlumno();" id="frmCambioAlumnos">
+			<input type="text" id="txtNumControl2" placeholder="Núm Control" class="form-control" required autofocus>
+			<input type="text" id="txtNombres2"      placeholder="Nombres" class="form-control" required>
+			<input type="text" id="txtApellidoPat2"  placeholder="Apellido Paterno" class="form-control" required>
+			<input type="text" id="txtApellidoMat2"  placeholder="Apellido Materno" class="form-control" required>
+			<input type="text" id="txtClaveCarrera2" placeholder="Clave Carrera" class="form-control" required>
+			<input type="text" id="txtSemestre2"     placeholder="Semestre" class="form-control" required>
+			<input type="text" id="txtPromedio2"     placeholder="Promedio" class="form-control" required>
+			<input type="text" id="txtEstatus2"      placeholder="Estatus" class="form-control" required>
+			<input type="submit" value="Guardar">
+		</form>
 	</section>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

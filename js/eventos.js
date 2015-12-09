@@ -3,6 +3,7 @@ var inicioApp = function()
 {
 	var altas = function()
 	{
+		$("body > section").hide("slow");
 		$("#secAltaAlumnos").show("slow");
 	}
 
@@ -41,7 +42,53 @@ var inicioApp = function()
 					alert("No se pudo guardar");
 			},
 			error: function(xhr,ajaxOptions,thrownError){
+				console.log("Ocurre un error");
+			}
+		});
 
+	}
+	var cambios = function()
+	{
+		$("body > section").hide("slow");
+		$("#secCambioAlumnos").show("slow");
+	}
+
+	var GuardaCambioAlumno = function()
+	{
+		var ncontrol  = $("#txtNumControl2").val();
+		var nombres   = $("#txtNombres2").val();
+		var apellidop = $("#txtApellidoPat2").val();
+		var apellidom = $("#txtApellidoMat2").val();
+		var carrera   = $("#txtClaveCarrera2").val();
+		var semestre  = $("#txtSemestre2").val();
+		var promedio  = $("#txtPromedio2").val();
+		var estatus   = $("#txtEstatus2").val();
+		var parametros = "orden=GuardaCambioAlumno"+
+						 "&ncontrol="+ncontrol+
+						 "&nombres="+nombres+
+						 "&apellidop="+apellidop+
+						 "&apellidom="+apellidom+
+						 "&carrera="+carrera+
+						 "&semestre="+semestre+
+						 "&promedio="+promedio+
+						 "&estatus="+estatus;
+		//Conexión con el PHP.
+		$.ajax({
+			cache: false, 
+			type: "POST",
+			dataType: "json",
+			url: "php/funciones.php",
+			data: parametros,
+			success: function(response){
+				if(response.respuesta == true)
+				{
+					alert("Registro actualizado");
+				}
+				else
+					alert("No se pudo actualizar");
+			},
+			error: function(xhr,ajaxOptions,thrownError){
+				console.log("Ocurre un error");
 			}
 		});
 
@@ -51,9 +98,18 @@ var inicioApp = function()
 	//se dispara la función: altas.
 	$("#btnAltas").on("click",altas);
 	$("#frmAltaAlumnos").on("submit",GuardaAltaAlumno);
+	$("#btnCambios").on("click",cambios);
+	$("#frmCambioAlumnos").on("submit",GuardaCambioAlumno);
+
 }
 //Al estar listo el documento dispara
 //la función inicial.
 $(document).on("ready",inicioApp);
+
+
+
+
+
+
 
 
