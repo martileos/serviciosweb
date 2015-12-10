@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de Prueba</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/eventos.js"></script>	
+</head>
+<body>
+	<header>
+		<h1>Sistema de PW10</h1>
+		<ul>
+			<li><button type="button" id="btnAltas" class="btn btn-primary">Altas</button></li>
+			<li><button type="button" class="btn btn-success">Bajas</button></li>
+			<li><button type="button" id="btnCambios" class="btn btn-info">Cambios</button></li>
+			<li><button type="button" id="btnConsultas" class="btn btn-warning">Consultas</button></li>
+			<li><button type="button" class="btn btn-danger">Salir</button></li>
+		</ul>
+	</header>
+	<section id="secAltaAlumnos">
+		<h2>Altas de Alumnos</h2>
+		<form action="javascript:GuardaAltaAlumno();" id="frmAltaAlumnos">
+			<input type="text" id="txtNumControl" placeholder="Núm Control" class="form-control" required autofocus>
+			<input type="text" id="txtNombres"      placeholder="Nombres" class="form-control" required>
+			<input type="text" id="txtApellidoPat"  placeholder="Apellido Paterno" class="form-control" required>
+			<input type="text" id="txtApellidoMat"  placeholder="Apellido Materno" class="form-control" required>
+			<input type="text" id="txtClaveCarrera" placeholder="Clave Carrera" class="form-control" required>
+			<input type="text" id="txtSemestre"     placeholder="Semestre" class="form-control" required>
+			<input type="text" id="txtPromedio"     placeholder="Promedio" class="form-control" required>
+			<input type="text" id="txtEstatus"      placeholder="Estatus" class="form-control" required>
+			<input type="submit" value="Guardar">
+		</form>
+	</section>
+	<section id="secCambioAlumnos">
+		<h2>Cambios de Alumnos</h2>
+		<form action="javascript:GuardaCambioAlumno();" id="frmCambioAlumnos">
+			<input type="text" id="txtNumControl2" placeholder="Núm Control" class="form-control" required autofocus>
+			<input type="text" id="txtNombres2"      placeholder="Nombres" class="form-control" required>
+			<input type="text" id="txtApellidoPat2"  placeholder="Apellido Paterno" class="form-control" required>
+			<input type="text" id="txtApellidoMat2"  placeholder="Apellido Materno" class="form-control" required>
+			<input type="text" id="txtClaveCarrera2" placeholder="Clave Carrera" class="form-control" required>
+			<input type="text" id="txtSemestre2"     placeholder="Semestre" class="form-control" required>
+			<input type="text" id="txtPromedio2"     placeholder="Promedio" class="form-control" required>
+			<input type="text" id="txtEstatus2"      placeholder="Estatus" class="form-control" required>
+			<input type="submit" value="Guardar">
+		</form>
+	</section>
+	<section id="secConsultas">
+		<table border=1 id="tablaConsultas" class="table">
+		</table>
+	</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
